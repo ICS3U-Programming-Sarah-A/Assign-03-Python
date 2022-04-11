@@ -2,9 +2,8 @@
 
 # Created by: Sarah
 # Created on: Apr, 5th, 2022
-# This program asks the user to  guess a number. It then generates a
-# random number. It also checks to see if user guess is a valid number entered 
-# to determine if user guess is == rand num. 
+# This program asks the user to enter a number. It then tell you what month
+# the number corrsponds to and how many days are in that month.
 
 
 def main():
@@ -17,47 +16,52 @@ def main():
         # Changing string into integer
         user_month_as_int = int(user_month)
         user_year_as_int = int(user_year)
-        # check to see if user guess == random number
-        if user_month_as_int == 1:
-          print("January {}". format(user_year), "has 31 days")
-        elif user_month_as_int == 2:
-            print("Febuary {}". format(user_year), "has 30 days")
-       
-        elif user_month_as_int == 3:
-            print("March {}". format(user_year), "has 31 days")
-       
-        elif user_month_as_int == 4:
-            print("April {}". format(user_year, "has 30 days")
-            
-        elif user_month_as_int == 5:
-            print("May {}". format(user_year), "has 31 days")
-       
-        elif user_month_as_int == 6:
-            print("June {}". format(user_year), "has 30 days")
-       
-        elif user_month_as_int == 7:
-            print("July {}". format(user_year), "has 31 days")
-       
-        elif user_month_as_int == 8:
-            print("August {}". format(user_year), "has 31 days")
-        
-        elif user_month_as_int == 9:
-            print("September {}". format(user_year), "has 30 days")
-        
-        elif user_month_as_int == 10:
-            print("October {}". format(user_year), "has 31 days")
-       
-        elif user_month_as_int == 11:
-            print("November {}". format(user_year), "has 30 days")
-       
-        elif user_month_as_int == 12:
-            print("December has 31 days")
-        
-        else: 
-          print("Please enter a valid number")
-          
+        if user_year_as_int < 1:
+            print("Please enter a positive number")
+        elif user_month_as_int > 12:
+            print("Please enter a number that represents a month")
+        else:
+            # check to see if user guess == random number
+            if user_month_as_int == 1:
+                print("January {} has 31 days". format(user_year))
+            elif user_month_as_int == 2:
+                print("Febuary {} has 30 days". format(user_year))
+    
+            elif user_month_as_int == 3:
+                print("March {} has 28 days". format(user_year))
+    
+            elif user_month_as_int == 4:
+                print("April {} has 30 days". format(user_year))
+    
+            elif user_month_as_int == 5:
+                print("May {} has 31 days". format(user_year))
+    
+            elif user_month_as_int == 6:
+                print("June {} has 30 days". format(user_year))
+    
+            elif user_month_as_int == 7:
+                print("July {} has 31 days". format(user_year))
+    
+            elif user_month_as_int == 8:
+                print("August {} has 31 days". format(user_year))
+    
+            elif user_month_as_int == 9:
+                print("September {} has 30 days". format(user_year))
+    
+            elif user_month_as_int == 10:
+                print("October {} has 31 days". format(user_year))
+    
+            elif user_month_as_int == 11:
+                print("November {} has 30 days". format(user_year))
+    
+            elif user_month_as_int == 12:
+                print("December {} has 31 days". format(user_year))
+    
+            else:
+                print("Please enter a valid month.")
+
     except Exception:
-        print("{} is not a number.". format(user_month))
+        print("{} is not a month or year.". format(user_year))
 
 
 if __name__ == "__main__":
